@@ -1,0 +1,5 @@
+This repo stores the basics for the signal comparison required to convert D-alpha upper and lower into one asymmetry signal (currently just differenced) before it is fed to the Z-controller via Trend Network Analogue to Optical convertors.
+
+The basics of the project is the Red Pitaya introduction FPGA found here (https://redpitaya-knowledge-base.readthedocs.io/en/latest/learn_fpga/3_vivado_env/tutorfpga2.html). However modifcations to the top file and the addition of a calibration module allow for saturation and calibration logic to be applied. The saturation logic is hard coded, whereas the calibration is flexible (see write_dual_calib.py). 
+
+Prior to operation the FPGA must be 'loaded' into the correct high-Z configuration to allow for high voltage input/output, this is done via the load_mode.py script.
